@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahu? Tempe! E-Commerce</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* == PENGATURAN AWAL == */
+        :root {
+            --primary: #b99256; /* Warna emas kecoklatan, cocok untuk tema makanan tradisional */
+            --bg: #fdf8f0; /* Warna latar belakang krem yang hangat */
+            --dark: #333;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--dark);
+        }
+
+        /* == NAVIGASI / NAVBAR == */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 7%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid #e0d8cc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            backdrop-filter: blur(4px);
+        }
+
+        .nav .judulnav a {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark);
+            
+        }
+
+        .nav .judulnav a span {
+            color: var(--primary);
+        }
+
+        .nav .tombolnav a {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 1rem;
+            color: var(--dark);
+            font-weight: 400;
+            position: relative;
+            background:url(icon_tahu.png);
+        }
+
+        .nav .tombolnav a::after {
+            content: '';
+            display: block;
+            padding-bottom: 0.2rem;
+            border-bottom: 0.1rem solid var(--primary);
+            transform: scaleX(0);
+            transition: 0.2s linear;
+        }
+
+        .nav .tombolnav a:hover::after {
+            transform: scaleX(0.7);
+        }
+
+        .nav .iconnav a {
+            color: var(--dark);
+            margin: 0 0.5rem;
+        }
+
+        .nav .iconnav a:hover {
+            color: var(--primary);
+        }
+        
+        /* == BAGIAN HOME / HERO SECTION == */
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Ganti 'url_gambar_tahu.jpg' dengan URL gambar Anda */
+            background-image: url('https://images.unsplash.com/photo-1626516392395-55271848c772?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        /* Efek overlay gelap agar teks mudah dibaca */
+        .home::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(1, 1, 3, 0.6) 8%, rgba(255, 255, 255, 0) 50%);
+        }
+
+        .home .content {
+            padding: 1.4rem 7%;
+            max-width: 60rem;
+            text-align: center;
+            margin: auto;
+            color: white;
+            z-index: 1; /* Agar konten di atas overlay */
+        }
+        
+        .home .content h1 {
+            font-size: 4em;
+            text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+            line-height: 1.2;
+        }
+
+        .home .content h1 span {
+            color: var(--primary);
+        }
+        
+        .home .content p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+        }
+        
+        .home .content .cta {
+            margin-top: 2rem;
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: var(--primary);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            transition: 0.2s;
+        }
+        
+        .home .content .cta:hover {
+            background-color: #a57f46;
+        }
+
+        /* == BAGIAN MENU PRODUK == */
+        .menu {
+            padding: 8rem 7% 1.4rem;
+        }
+
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .menu h2 span {
+            color: var(--primary);
+        }
+
+        .menu p {
+            text-align: center;
+            max-width: 30rem;
+            margin: auto;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+
+        .menu .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .menu .menu-card {
+            background-color: #fff;
+            text-align: center;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.2s transform;
+        }
+        
+        .menu .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu .menu-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu .menu-card-title {
+            font-size: 1.2rem;
+            margin: 1rem auto 0.5rem;
+        }
+
+        .menu .menu-card-price {
+            font-weight: bold;
+            color: var(--primary);
+            padding-bottom: 1rem;
+        }
+
+        /* == FOOTER == */
+        footer {
+            background-color: var(--primary);
+            text-align: center;
+            padding: 1rem 0 2rem;
+            margin-top: 3rem;
+        }
+
+        footer .socials {
+            padding: 1rem 0;
+        }
+
+        footer .socials a {
+            color: white;
+            margin: 0 0.5rem;
+        }
+        
+        footer .socials a:hover,
+        footer .links a:hover {
+            color: var(--dark);
+        }
+
+        footer .links {
+            margin-bottom: 1rem;
+        }
+
+        footer .links a {
+            color: white;
+            padding: 0.7rem 1rem;
+        }
+
+        footer .credit {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+
+        footer .credit a {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="judulnav">
+            <a href="#home">Tahu?<span>!Tempe</span></a>
+        </div>
+        
+        <nav class="tombolnav">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+        
+        <div class="iconnav">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+        <main class="content">
+            <h1>Sajian Lezat dari <span>Kedelai</span> Pilihan</h1>
+            <p>Nikmati tahu berkualitas premium, dibuat dengan resep turun-temurun untuk cita rasa yang tak terlupakan.</p>
+            <a href="#menu" class="cta">Beli Sekarang</a>
+        </main>
+    </section>
+    <section class="about" id="about">
+        <div></div>
+    </section>
+    <section class="menu" id="menu">
+        <h2><span>Menu</span> Kami</h2>
+        <p>Pilih varian tahu favoritmu yang siap memanjakan lidah. Segar, sehat, dan penuh protein.</p>
+        
+        <div class="row">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1562562425-968164353412?q=80&w=1964&auto=format&fit=crop" alt="Tahu Sutra" class="menu-card-img">
+                <h3 class="menu-card-title">- Tahu Sutra -</h3>
+                <p class="menu-card-price">IDR 15.000</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1587372891396-419515569424?q=80&w=1964&auto=format&fit=crop" alt="Tahu Kuning" class="menu-card-img">
+                <h3 class="menu-card-title">- Tahu Kuning -</h3>
+                <p class="menu-card-price">IDR 12.000</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://plus.unsplash.com/premium_photo-1669642084299-f434199c4b18?q=80&w=2070&auto=format&fit=crop" alt="Tahu Goreng" class="menu-card-img">
+                <h3 class="menu-card-title">- Tahu Goreng -</h3>
+                <p class="menu-card-price">IDR 18.000</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-1f171c667325?q=80&w=1974&auto=format&fit=crop" alt="Tahu Bakso" class="menu-card-img">
+                <h3 class="menu-card-title">- Tahu Bakso -</h3>
+                <p class="menu-card-price">IDR 25.000</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        
+        <div class="credit">
+            <p>Dibuat oleh <a href="#">Tim Tahu Tempe</a>. | &copy; 2025.</p>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
