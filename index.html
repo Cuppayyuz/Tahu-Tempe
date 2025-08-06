@@ -92,7 +92,8 @@
             color: var(--dark);
             margin: 0 0.5rem;
             transition: color 0.2s;
-            position: relative; /* Diperlukan untuk badge */
+            position: relative;
+            /* Diperlukan untuk badge */
         }
 
         .navbar .navbar-extra a:hover {
@@ -162,7 +163,7 @@
             position: absolute;
             top: 100%;
             right: -100%;
-            height: 100vh;
+            height: calc(100vh - 100%);
             width: 35rem;
             padding: 2rem;
             background-color: var(--bg);
@@ -181,7 +182,7 @@
             flex-grow: 1;
             overflow-y: auto;
         }
-        
+
         .shopping-cart .cart-item {
             display: flex;
             align-items: center;
@@ -215,26 +216,29 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
-        
+
         .shopping-cart .remove-item:hover {
             color: var(--primary);
         }
-        
+
         /* [BARU] Total dan Checkout */
         .cart-total {
             margin-top: 2rem;
             padding-top: 1rem;
             border-top: 2px solid var(--dark);
         }
+
         .cart-total h4 {
             font-size: 1.4rem;
             margin-bottom: 1rem;
         }
+
         .cart-total p {
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--primary);
         }
+
         .cart-checkout-btn {
             display: block;
             width: 100%;
@@ -247,6 +251,7 @@
             border-radius: var(--border-radius);
             transition: 0.2s;
         }
+
         .cart-checkout-btn:hover {
             background-color: #a57f46;
         }
@@ -258,9 +263,10 @@
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Penting untuk animasi background */
+            overflow: hidden;
+            /* Penting untuk animasi background */
         }
-        
+
         .hero .hero-background {
             position: absolute;
             top: 0;
@@ -431,7 +437,7 @@
 
         .menu .menu-card .menu-icons a {
             color: #fff;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -579,7 +585,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             align-items: center;
             justify-content: center;
         }
@@ -604,6 +610,7 @@
                 transform: translateY(-100px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -734,7 +741,7 @@
             .navbar .navbar-nav a:hover::after {
                 transform: scaleX(0.2);
             }
-            
+
             .navbar .search-form {
                 width: 90%;
                 right: 2rem;
@@ -758,15 +765,15 @@
                 margin-top: 1rem;
                 font-size: 2rem;
             }
-            
+
             .contact .row {
                 flex-wrap: wrap;
             }
-            
+
             .contact .row .map {
                 height: 30rem;
             }
-            
+
             .contact .row form {
                 padding-top: 0;
             }
@@ -774,6 +781,7 @@
             .modal .modal-content {
                 flex-wrap: wrap;
             }
+
             .modal .modal-content #modal-image {
                 width: 100%;
                 height: auto;
@@ -813,10 +821,10 @@
             <input type="search" id="search-box" placeholder="Cari produk...">
             <label for="search-box"><i data-feather="search"></i></label>
         </div>
-        
+
         <div class="shopping-cart">
             <div id="cart-items-container">
-                </div>
+            </div>
             <div class="cart-total">
                 <h4>Total Belanja:</h4>
                 <p id="cart-total-price">IDR 0</p>
@@ -828,10 +836,11 @@
         <div class="hero-background active" style="background-image: url(items/tofu1.jpg);"></div>
         <div class="hero-background" style="background-image: url(items/tofu2.jpg);"></div>
         <div class="hero-background" style="background-image: url(items/tofu3.jpg);"></div>
-        
+
         <main class="content">
             <h1>Sajian Lezat dari <span>Kedelai</span> Pilihan</h1>
-            <p>Nikmati tahu dan tempe berkualitas premium, dibuat dengan resep turun-temurun untuk cita rasa yang tak terlupakan.</p>
+            <p>Nikmati tahu dan tempe berkualitas premium, dibuat dengan resep turun-temurun untuk cita rasa yang tak
+                terlupakan.</p>
             <a href="#menu" class="cta">Beli Sekarang</a>
         </main>
     </section>
@@ -843,8 +852,10 @@
             </div>
             <div class="content">
                 <h3>Kenapa memilih produk kami?</h3>
-                <p>Kami mendedikasikan diri untuk membuat tahu & tempe terbaik dari kedelai lokal pilihan. Setiap potong dibuat dengan cinta dan resep tradisional yang diwariskan dari generasi ke generasi.</p>
-                <p>Proses pembuatan kami higienis dan tanpa bahan pengawet, memastikan Anda mendapatkan produk yang tidak hanya lezat, tetapi juga sehat dan aman untuk keluarga.</p>
+                <p>Kami mendedikasikan diri untuk membuat tahu & tempe terbaik dari kedelai lokal pilihan. Setiap potong
+                    dibuat dengan cinta dan resep tradisional yang diwariskan dari generasi ke generasi.</p>
+                <p>Proses pembuatan kami higienis dan tanpa bahan pengawet, memastikan Anda mendapatkan produk yang
+                    tidak hanya lezat, tetapi juga sehat dan aman untuk keluarga.</p>
             </div>
         </div>
     </section>
@@ -852,11 +863,8 @@
         <h2><span>Menu</span> Kami</h2>
         <p>Pilih varian favoritmu yang siap memanjakan lidah. Segar, sehat, dan penuh protein.</p>
         <div class="row">
-             <div class="menu-card" 
-                data-product-id="p1"
-                data-product-image="items/tahusup.jpg" 
-                data-product-title="Sup tahu" 
-                data-product-price="15000" 
+            <div class="menu-card" data-product-id="p1" data-product-image="items/tahusup.jpg"
+                data-product-title="Sup tahu" data-product-price="15000"
                 data-product-description="Tahu sutra super lembut yang lumer di mulut, cocok untuk sup, sapo tahu, atau digoreng krispi. Dibuat dari kedelai pilihan tanpa bahan pengawet.">
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
@@ -870,11 +878,8 @@
                     <p class="menu-card-price">IDR 15.000</p>
                 </div>
             </div>
-            <div class="menu-card" 
-                data-product-id="p2"
-                data-product-image="items/tahufantasi.jpg" 
-                data-product-title="Tahu Fantasi Sosis  " 
-                data-product-price="12000"
+            <div class="menu-card" data-product-id="p2" data-product-image="items/tahufantasi.jpg"
+                data-product-title="Tahu Fantasi Sosis" data-product-price="12000"
                 data-product-description="Tahu kuning khas Kediri dengan tekstur padat dan rasa gurih. Diolah dengan kunyit alami sebagai pewarna, kaya akan protein dan nikmat untuk digoreng.">
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
@@ -888,49 +893,50 @@
                     <p class="menu-card-price">IDR 12.000</p>
                 </div>
             </div>
-            <div class="menu-card" 
-                data-product-id="p3"
-                data-product-image="https://plus.unsplash.com/premium_photo-1669642084299-f434199c4b18?q=80&w=2070&auto=format&fit=crop" 
-                data-product-title="Tahu Goreng" 
-                data-product-price="18000"
-                data-product-description="Tahu goreng renyah di luar dan lembut di dalam. Disajikan hangat dengan bumbu spesial atau sambal kecap pedas. Camilan sempurna untuk segala suasana.">
-                 <div class="menu-icons">
+            <div class="menu-card" data-product-id="p3" data-product-image="items/tahubulat.jpg"
+                data-product-title="Tahu Bulat" data-product-price="18000"
+                data-product-description="Tahu Bulat renyah di luar dan lembut di dalam. Disajikan hangat dengan bumbu spesial atau sambal kecap pedas. Camilan sempurna untuk segala suasana.">
+                <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
                     <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="menu-image">
-                    <img src="items/tahubulat.jpg" alt="Tahu Goreng" class="menu-card-img">
+                    <img src="items/tahubulat.jpg" alt="Tahu Bulat" class="menu-card-img">
                 </div>
                 <div class="menu-content">
-                    <h3 class="menu-card-title">- Tahu Goreng -</h3>
+                    <h3 class="menu-card-title">- Tahu Bulat -</h3>
                     <p class="menu-card-price">IDR 18.000</p>
                 </div>
             </div>
-             <div class="menu-card"
-                data-product-id="p4" 
-                data-product-image="https://images.unsplash.com/photo-1605100804763-1f171c667325?q=80&w=1974&auto=format&fit=crop"
-                data-product-title="Tahu Bakso" 
-                data-product-price="25000"
+            <div class="menu-card" data-product-id="p4" data-product-image="items/tahucoklat.jpeg"
+                data-product-title="Tahu Bakso" data-product-price="25000"
                 data-product-description="Perpaduan sempurna antara tahu goreng renyah dengan isian bakso sapi yang kenyal dan lezat. Disajikan dengan saus sambal, cocok sebagai lauk atau camilan.">
                 <div class="menu-icons">
-                   <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
-                   <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-               </div>
-               <div class="menu-image">
-                   <img src="https://images.unsplash.com/photo-1605100804763-1f171c667325?q=80&w=1974&auto=format&fit=crop" alt="Tahu Bakso" class="menu-card-img">
-               </div>
-               <div class="menu-content">
-                   <h3 class="menu-card-title">- Tahu Bakso -</h3>
-                   <p class="menu-card-price">IDR 25.000</p>
-               </div>
-           </div>
+                    <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="menu-image">
+                    <img src="items/tahucoklat.jpeg" alt="Tahu Bakso" class="menu-card-img">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-card-title">- Tahu Coklat Crispy -</h3>
+                    <p class="menu-card-price">IDR 25.000</p>
+                </div>
+            </div>
+
+            <p id="search-no-result"
+                style="display: none; text-align: center; grid-column: 1 / -1; font-size: 1.4rem; margin-top: 2rem;">
+                Maaf, produk yang Anda cari tidak ditemukan.
+            </p>
         </div>
     </section>
     <section id="contact" class="contact">
         <h2><span>Kontak</span> Kami</h2>
         <p>Hubungi kami jika ada pertanyaan atau pesanan khusus. Kami siap membantu!</p>
         <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15830.569192900018!2d112.73507963955078!3d-7.280145899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbdfa919cc79%3A0x1dbecb0b2e391409!2sMonumen%20Tugu%20Pahlawan%20dan%20Museum%20Sepuluh%20Nopember%20Surabaya!5e0!3m2!1sid!2sid!4v1722886001254!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.777321568288!2d112.7554972147748!3d-7.26574169475438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f952c6f1f5a9%3A0x1e3e542820d8f51!2sSurabaya%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1678886665555!5m2!1sen!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
             <form action="">
                 <div class="input-group">
                     <i data-feather="user"></i>
@@ -980,12 +986,9 @@
                         <i data-feather="star"></i>
                     </div>
                     <div class="product-price" id="modal-price"></div>
-                    <a href="#" class="add-to-cart-btn add-to-cart-button"
-                        data-product-id="" 
-                        data-product-image="" 
-                        data-product-title="" 
-                        data-product-price="">
-                        <i data-feather="shopping-cart"></i> 
+                    <a href="#" class="add-to-cart-btn add-to-cart-button" data-product-id="" data-product-image=""
+                        data-product-title="" data-product-price="">
+                        <i data-feather="shopping-cart"></i>
                         <span>Add to Cart</span>
                     </a>
                 </div>
@@ -1021,7 +1024,7 @@
             e.preventDefault();
         };
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
                 navbarNav.classList.remove('active');
             }
@@ -1036,7 +1039,7 @@
         // --- Background Hero Berganti Otomatis ---
         const backgrounds = document.querySelectorAll('.hero-background');
         let currentBgIndex = 0;
-        
+
         setInterval(() => {
             backgrounds[currentBgIndex].classList.remove('active');
             currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
@@ -1090,9 +1093,9 @@
         });
 
         // =======================================================
-        // --- [FUNGSI BARU] LOGIKA KERANJANG BELANJA ---
+        // --- LOGIKA KERANJANG BELANJA ---
         // =======================================================
-        
+
         let cart = []; // Menyimpan data item di keranjang
 
         function formatRupiah(number) {
@@ -1111,32 +1114,33 @@
 
             cart.forEach(item => {
                 const cartItemHTML = `
-                    <div class="cart-item" data-product-id="${item.id}">
-                        <img src="${item.image}" alt="${item.title}">
-                        <div class="item-detail">
-                            <h3>${item.title}</h3>
-                            <div class="item-price">${formatRupiah(item.price)} x ${item.quantity}</div>
+                        <div class="cart-item" data-product-id="${item.id}">
+                            <img src="${item.image}" alt="${item.title}">
+                            <div class="item-detail">
+                                <h3>${item.title}</h3>
+                                <div class="item-price">${formatRupiah(item.price)} x ${item.quantity}</div>
+                            </div>
+                            <i data-feather="trash-2" class="remove-item"></i>
                         </div>
-                        <i data-feather="trash-2" class="remove-item"></i>
-                    </div>
-                `;
+                    `;
                 cartContainer.innerHTML += cartItemHTML;
                 total += item.price * item.quantity;
                 totalItems += item.quantity;
             });
-            
+
             // Update total harga
             cartTotalPrice.textContent = formatRupiah(total);
-            
+
             // Update badge jumlah item
             if (totalItems > 0) {
                 cartBadge.textContent = totalItems;
                 cartBadge.style.display = 'flex';
             } else {
                 cartBadge.style.display = 'none';
-                cartContainer.innerHTML = '<p style="text-align: center; color: #999;">Keranjang belanja masih kosong.</p>';
+                cartContainer.innerHTML =
+                    '<p style="text-align: center; color: #999;">Keranjang belanja masih kosong.</p>';
             }
-            
+
             feather.replace(); // Perbarui ikon setelah menambahkan elemen baru
         }
 
@@ -1145,7 +1149,7 @@
             button.onclick = (e) => {
                 e.preventDefault();
                 const card = button.closest('.menu-card') || button.closest('.modal-container');
-                
+
                 const product = {
                     id: card.dataset.productId,
                     title: card.dataset.productTitle,
@@ -1176,36 +1180,51 @@
             if (e.target.classList.contains('remove-item') || e.target.closest('.remove-item')) {
                 const cartItem = e.target.closest('.cart-item');
                 const productId = cartItem.dataset.productId;
-                
+
                 // Hapus item dari array cart
                 cart = cart.filter(item => item.id !== productId);
-                
+
                 updateCartView();
             }
         });
-        
+
         // Inisialisasi tampilan keranjang
         updateCartView();
 
 
         // =======================================================
-        // --- [FUNGSI BARU] LOGIKA PENCARIAN PRODUK ---
+        // --- [MODIFIKASI] LOGIKA PENCARIAN PRODUK ---
+        // Penambahan pesan "produk tidak ditemukan"
         // =======================================================
 
-        searchBox.addEventListener('input', function() {
+        const noResultMessage = document.querySelector('#search-no-result');
+
+        searchBox.addEventListener('input', function () {
             const searchTerm = searchBox.value.toLowerCase().trim();
             const menuCards = document.querySelectorAll('.menu .menu-card');
+            let productsFound = false; // Penanda untuk melacak apakah ada produk yang ditemukan
 
             menuCards.forEach(card => {
                 const title = card.querySelector('.menu-card-title').textContent.toLowerCase();
-                
+
+                // Jika judul produk mengandung kata kunci pencarian
                 if (title.includes(searchTerm)) {
-                    card.style.display = 'block';
+                    card.style.display = 'block'; // Tampilkan kartu produk
+                    productsFound = true; // Set penanda menjadi true
                 } else {
-                    card.style.display = 'none';
+                    card.style.display = 'none'; // Sembunyikan kartu produk
                 }
             });
+
+            // Kondisi untuk menampilkan atau menyembunyikan pesan
+            // Pesan akan muncul jika tidak ada produk yang ditemukan DAN input pencarian tidak kosong
+            if (!productsFound && searchTerm) {
+                noResultMessage.style.display = 'block';
+            } else {
+                noResultMessage.style.display = 'none';
+            }
         });
     </script>
 </body>
+
 </html>
