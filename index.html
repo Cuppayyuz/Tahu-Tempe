@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://unpkg.com/feather-icons"></script>
 
@@ -846,7 +847,7 @@
     </section>
     <section id="about" class="about">
         <h2><span>Tentang</span> Kami</h2>
-        <div class="row">
+        <div class="row" data-aos="fade-left" data-aos-mirror="true" data-aos-delay="50">
             <div class="about-img">
                 <img src="items/tauhu.jpeg" alt="Tentang Kami">
             </div>
@@ -865,7 +866,8 @@
         <div class="row">
             <div class="menu-card" data-product-id="p1" data-product-image="items/tahusup.jpg"
                 data-product-title="Sup tahu" data-product-price="15000"
-                data-product-description="Tahu sutra super lembut yang lumer di mulut, cocok untuk sup, sapo tahu, atau digoreng krispi. Dibuat dari kedelai pilihan tanpa bahan pengawet.">
+                data-product-description="Tahu sutra super lembut yang lumer di mulut, cocok untuk sup, sapo tahu, atau digoreng krispi. Dibuat dari kedelai pilihan tanpa bahan pengawet."
+                 data-aos="fade-up" data-aos-mirror="true" data-aos-delay="45">
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
                     <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -880,7 +882,8 @@
             </div>
             <div class="menu-card" data-product-id="p2" data-product-image="items/tahufantasi.jpg"
                 data-product-title="Tahu Fantasi Sosis" data-product-price="12000"
-                data-product-description="Tahu kuning khas Kediri dengan tekstur padat dan rasa gurih. Diolah dengan kunyit alami sebagai pewarna, kaya akan protein dan nikmat untuk digoreng.">
+                data-product-description="Tahu kuning khas Kediri dengan tekstur padat dan rasa gurih. Diolah dengan kunyit alami sebagai pewarna, kaya akan protein dan nikmat untuk digoreng."
+                 data-aos="fade-up" data-aos-mirror="true" data-aos-delay="75">
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
                     <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -895,7 +898,8 @@
             </div>
             <div class="menu-card" data-product-id="p3" data-product-image="items/tahubulat.jpg"
                 data-product-title="Tahu Bulat" data-product-price="18000"
-                data-product-description="Tahu Bulat renyah di luar dan lembut di dalam. Disajikan hangat dengan bumbu spesial atau sambal kecap pedas. Camilan sempurna untuk segala suasana.">
+                data-product-description="Tahu Bulat renyah di luar dan lembut di dalam. Disajikan hangat dengan bumbu spesial atau sambal kecap pedas. Camilan sempurna untuk segala suasana." 
+                data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" >
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
                     <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -910,7 +914,8 @@
             </div>
             <div class="menu-card" data-product-id="p4" data-product-image="items/tahucoklat.jpeg"
                 data-product-title="Tahu Bakso" data-product-price="25000"
-                data-product-description="Perpaduan sempurna antara tahu goreng renyah dengan isian bakso sapi yang kenyal dan lezat. Disajikan dengan saus sambal, cocok sebagai lauk atau camilan.">
+                data-product-description="Perpaduan sempurna antara tahu goreng renyah dengan isian bakso sapi yang kenyal dan lezat. Disajikan dengan saus sambal, cocok sebagai lauk atau camilan."
+                 data-aos="fade-up" data-aos-mirror="true" data-aos-delay="125">
                 <div class="menu-icons">
                     <a href="#" class="add-to-cart-button"><i data-feather="shopping-cart"></i></a>
                     <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -995,6 +1000,10 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         // Inisialisasi Feather Icons
         feather.replace();
